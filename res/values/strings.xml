@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyFirstApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="edit_message"> Enter company name</string>
+	<string name="stock_value"> Stock Value: </string>
+	<string name="button_site">Go to SJSU site</string>
+	<string name="button_stock">Check Stock</string>
+</resources>
