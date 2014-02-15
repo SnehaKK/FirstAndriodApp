@@ -11,6 +11,13 @@
         android:layout_height="wrap_content"
         android:text="@string/button_site"
         android:onClick="gotoSite" />
+        
+    <TextView
+        android:id="@+id/enter_stock_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_stock_symbol"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/edit_message"
