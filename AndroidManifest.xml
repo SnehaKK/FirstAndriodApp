@@ -23,11 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".getStockValue"
-            android:label="Get Stock Value" >
-        </activity>
-        
     </application>
 
 </manifest>
