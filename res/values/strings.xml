@@ -4,7 +4,7 @@
     <string name="app_name">MyFirstApp</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-	<string name="edit_message"> Enter company symbol(APPL,GOOG,..)</string>
+	<string name="edit_message"> Enter company symbol(AAPL or GOOG or MSFT..)</string>
 	<string name="stock_value"> Stock Value: </string>
 	<string name="button_site">Go to SJSU site</string>
 	<string name="button_stock">Check Stock</string>

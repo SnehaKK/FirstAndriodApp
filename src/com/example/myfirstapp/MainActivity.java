@@ -1,28 +1,36 @@
 package com.example.myfirstapp;
 
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	}
-
+    
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+    
 	/**
 	 * To go to the SJSU Site
 	 */
@@ -55,7 +63,7 @@ public class MainActivity extends Activity {
             
 			// URL to retrieve the stock value
 			HttpClient Client = new DefaultHttpClient();
-			String URL = "http://finance.yahoo.com/d/quotes.csv?f=l1&s="
+			String URL = "http://finance.yahoo.com/d/quotes.csv?f=nsl1&s="
             + params[0];
             
 			try {
@@ -85,8 +93,10 @@ public class MainActivity extends Activity {
 			// Update the stock on the UI.
 			// EditText stockText= (EditText) findViewById(R.id.edit_message);
 			// stockText.setText(result);
+			String[] parts= result.split(",");
 			TextView stockValue = (TextView) findViewById(R.id.stock_value);
-			stockValue.setText("Stock Value:" + result);
+			stockValue.setText("Stock Name: " + parts[0] + "\nStock Symbol: "
+                               + parts[1] + "\nLatest Value: " + parts[2]);
 		}
 	}
 }
